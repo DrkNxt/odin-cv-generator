@@ -1,16 +1,7 @@
-import { useState } from "react";
 import Input from "./Input.jsx";
+import TextArea from "./TextArea.jsx";
 
-export default function PracticalExpEditor() {
-  const [praticalExp, setPracticalExp] = useState({
-    companyName: "",
-    positionTitle: "",
-    mainTasks: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-  });
-
+export default function PracticalExpEditor({ practicalExp, setPracticalExp }) {
   return (
     <div className="practical-exp-editor">
       <h3>Professional Experience</h3>
@@ -18,39 +9,41 @@ export default function PracticalExpEditor() {
         <Input
           label="Company Name"
           placeholder="Google"
-          value={praticalExp.companyName}
-          onChange={(e) => setPracticalExp({ ...praticalExp, companyName: e.target.value })}
+          value={practicalExp.companyName}
+          onChange={(e) => setPracticalExp({ ...practicalExp, companyName: e.target.value })}
         ></Input>
         <Input
           label="Position Title"
           placeholder="Software Engineer"
-          value={praticalExp.positionTitle}
-          onChange={(e) => setPracticalExp({ ...praticalExp, positionTitle: e.target.value })}
-        ></Input>
-        <Input
-          label="Main Tasks"
-          placeholder="Develop and maintain web applications"
-          value={praticalExp.mainTasks}
-          onChange={(e) => setPracticalExp({ ...praticalExp, mainTasks: e.target.value })}
-        ></Input>
-        <Input
-          label="Start Date"
-          placeholder="January 2025"
-          value={praticalExp.startDate}
-          onChange={(e) => setPracticalExp({ ...praticalExp, startDate: e.target.value })}
-        ></Input>
-        <Input
-          label="End Date"
-          placeholder="Present"
-          value={praticalExp.endDate}
-          onChange={(e) => setPracticalExp({ ...praticalExp, endDate: e.target.value })}
+          value={practicalExp.positionTitle}
+          onChange={(e) => setPracticalExp({ ...practicalExp, positionTitle: e.target.value })}
         ></Input>
         <Input
           label="Location"
           placeholder="California, USA"
-          value={praticalExp.location}
-          onChange={(e) => setPracticalExp({ ...praticalExp, location: e.target.value })}
+          value={practicalExp.location}
+          onChange={(e) => setPracticalExp({ ...practicalExp, location: e.target.value })}
         ></Input>
+        <div className="date-input">
+          <Input
+            label="Start Date"
+            placeholder="January 2025"
+            value={practicalExp.startDate}
+            onChange={(e) => setPracticalExp({ ...practicalExp, startDate: e.target.value })}
+          ></Input>
+          <Input
+            label="End Date"
+            placeholder="Present"
+            value={practicalExp.endDate}
+            onChange={(e) => setPracticalExp({ ...practicalExp, endDate: e.target.value })}
+          ></Input>
+        </div>
+        <TextArea
+          label="Main Tasks"
+          placeholder="Develop and maintain web applications"
+          value={practicalExp.mainTasks}
+          onChange={(e) => setPracticalExp({ ...practicalExp, mainTasks: e.target.value })}
+        ></TextArea>
       </form>
     </div>
   );

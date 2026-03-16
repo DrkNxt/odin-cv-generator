@@ -6,7 +6,7 @@ export default function Input({
   onChange,
 }) {
   return (
-    <div>
+    <div className="input">
       <label>
         {label}
         <input type={type} value={value} placeholder={placeholder} onChange={onChange}></input>

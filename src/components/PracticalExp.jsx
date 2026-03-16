@@ -1,40 +1,24 @@
-export default function PracticalExp({
-  practicalExps = [
-    {
-      companyName: "Google",
-      positionTitle: "Software Engineer",
-      mainTasks: "Develop and maintain web applications",
-      startDate: "January 2025",
-      endDate: "Present",
-      location: "California, USA",
-    },
-  ],
-}) {
+import { Fragment } from "react";
+
+export default function PracticalExp({ practicalExp }) {
   return (
     <div className="practical-exp">
       <h3>Professional Experience</h3>
-      {practicalExps.map((practicalExp, i) => {
-        let separator = <></>;
-        if (i > 0) {
-          separator = <hr></hr>;
-        }
-        return (
-          <>
-            {separator}
-            <div className="work row">
-              <div>
-                <div className="date">{practicalExp.startDate + " - " + practicalExp.endDate}</div>
-                <div>{practicalExp.location}</div>
-              </div>
-              <div>
-                <div className="bold">{practicalExp.companyName}</div>
-                <div>{practicalExp.positionTitle}</div>
-                <div>{practicalExp.mainTasks}</div>
-              </div>
-            </div>
-          </>
-        );
-      })}
+      <div className="work row">
+        <div className="left-column">
+          <div className="date">
+            {practicalExp.startDate !== ""
+              ? practicalExp.startDate + " - " + practicalExp.endDate
+              : practicalExp.endDate}
+          </div>
+          <div>{practicalExp.location}</div>
+        </div>
+        <div>
+          <div className="bold">{practicalExp.companyName}</div>
+          <div>{practicalExp.positionTitle}</div>
+          <div>{practicalExp.mainTasks}</div>
+        </div>
+      </div>
     </div>
   );
 }
