@@ -7,11 +7,12 @@ export default function EducationalExpEditor() {
     titleOfStudy: "",
     startDate: "",
     endDate: "",
+    location: "",
   });
 
   return (
     <div className="educational-exp-editor">
-      <h3>Educational Experience</h3>
+      <h3>Education</h3>
       <form>
         <Input
           label="School Name"
@@ -36,6 +37,12 @@ export default function EducationalExpEditor() {
           placeholder="June 2024"
           value={educationalExp.endDate}
           onChange={(e) => setEducationalExp({ ...educationalExp, endDate: e.target.value })}
+        ></Input>
+        <Input
+          label="Location"
+          placeholder="California, USA"
+          value={educationalExp.location}
+          onChange={(e) => setEducationalExp({ ...educationalExp, location: e.target.value })}
         ></Input>
       </form>
     </div>

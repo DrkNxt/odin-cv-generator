@@ -8,11 +8,12 @@ export default function PracticalExpEditor() {
     mainTasks: "",
     startDate: "",
     endDate: "",
+    location: "",
   });
 
   return (
     <div className="practical-exp-editor">
-      <h3>Practical Experience</h3>
+      <h3>Professional Experience</h3>
       <form>
         <Input
           label="Company Name"
@@ -43,6 +44,12 @@ export default function PracticalExpEditor() {
           placeholder="Present"
           value={praticalExp.endDate}
           onChange={(e) => setPracticalExp({ ...praticalExp, endDate: e.target.value })}
+        ></Input>
+        <Input
+          label="Location"
+          placeholder="California, USA"
+          value={praticalExp.location}
+          onChange={(e) => setPracticalExp({ ...praticalExp, location: e.target.value })}
         ></Input>
       </form>
     </div>

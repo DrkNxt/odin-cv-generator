@@ -17,6 +17,12 @@ body {
   min-height: 100vh;
 }
 
+h3 {
+  font-size: 20px;
+  text-align: center;
+  background-color: #18a38020;
+}
+
 .cv-editor {
   display: flex;
   flex-direction: column;
@@ -50,7 +56,10 @@ body {
   display: flex;
   flex-direction: row;
   gap: 32px;
-  justify-content: center;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .general-info,
@@ -59,7 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
+  padding: 24px 48px;
 }
 
 .general-info {
@@ -68,11 +77,22 @@ body {
   background-color: #1d3c34;
 }
 
+.contact-infos {
+  justify-content: center;
+}
+
 .contact-info {
   display: flex;
   flex-direction: row;
   gap: 8px;
   align-items: center;
+}
+
+.education > *,
+.work > * {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 svg {
