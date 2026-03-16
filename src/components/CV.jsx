@@ -1,3 +1,13 @@
+import GeneralInfo from "./GeneralInfo.jsx";
+import EducationalExp from "./EducationalExp.jsx";
+import PracticalExp from "./PracticalExp.jsx";
+
 export default function CV() {
-  return <h1>CV</h1>;
+  return (
+    <div className="cv-preview">
+      <GeneralInfo></GeneralInfo>
+      <EducationalExp></EducationalExp>
+      <PracticalExp></PracticalExp>
+    </div>
+  );
 }

@@ -5,7 +5,7 @@ import PracticalExpEditor from "./PracticalExpEditor.jsx";
 export default function CVEditor() {
   return (
     <div className="cv-editor">
-      <h1>CV Editor</h1>
+      <h2>CV Editor</h2>
       <GeneralInfoEditor></GeneralInfoEditor>
       <EducationalExpEditor></EducationalExpEditor>
       <PracticalExpEditor></PracticalExpEditor>

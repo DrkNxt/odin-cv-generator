@@ -11,7 +11,7 @@ export default function EducationalExpEditor() {
 
   return (
     <div className="educational-exp-editor">
-      <h2>Educational Experience</h2>
+      <h3>Educational Experience</h3>
       <form>
         <Input
           label="School Name"

@@ -12,7 +12,7 @@ export default function PracticalExpEditor() {
 
   return (
     <div className="practical-exp-editor">
-      <h2>Practical Experience</h2>
+      <h3>Practical Experience</h3>
       <form>
         <Input
           label="Company Name"
